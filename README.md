@@ -4,7 +4,7 @@
 
 [![](http://imgs.xkcd.com/comics/file_extensions.png)](https://xkcd.com/1301/)
 
-These Formulae have a hard requirement on [TeX](https://www.tug.org/mactex/).
+This tap contains formulae that depend on [TeX](https://www.tug.org/mactex/).
 
 ## How do I install these formulae?
 
