@@ -18,7 +18,7 @@ before_install:
   - if [ -f ".git/shallow" ]; then travis_retry git fetch --unshallow; fi
   - sudo chown -R $USER $(brew --repo)
   - brew update
-  - brew install caskroom/cask/brew-cask
+  - if ! brew command cask &> /dev/null; then brew install caskroom/cask/brew-cask; fi
   - sudo brew cask install basictex
   - export PATH="$PATH:/Library/TeX/texbin"
   - mkdir -p $(brew --repo)/Library/Taps/homebrew
