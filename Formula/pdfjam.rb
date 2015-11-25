@@ -1,8 +1,9 @@
 class Pdfjam < Formula
+  desc "Equivalent of pdfpages for pdfLaTeX"
   homepage "https://www2.warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam"
   url "https://www2.warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/pdfjam_208.tgz"
-  sha256 "c731c598cfad076c985526ff89cbf34423a216101aa5e2d753a71de119ecc0f3"
   version "2.08"
+  sha256 "c731c598cfad076c985526ff89cbf34423a216101aa5e2d753a71de119ecc0f3"
 
   depends_on :tex
 
