@@ -1,4 +1,5 @@
 class Texwrapper < Formula
+  desc "Run TeX and some tools like BibTeX or MakeIndex at once"
   homepage "http://obrecht.fr/texwrapper/"
   url "http://obrecht.fr/texwrapper/texwrapper.0.2.2.tar.gz"
   sha256 "408cf3678db657b0c0edf276d768dad562302451639f0ad6e705133db60dcb64"
