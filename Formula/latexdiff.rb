@@ -1,4 +1,5 @@
 class Latexdiff < Formula
+  desc "Mark up significant differences between LATEX files"
   homepage "http://www.ctan.org/pkg/latexdiff"
   url "https://github.com/ftilmann/latexdiff/archive/1.1.0.tar.gz"
   sha256 "e5fc439ac82fcce902134d207f751577abe4939a7ad7ed2df8f9989041701167"
