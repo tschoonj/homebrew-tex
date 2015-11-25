@@ -1,4 +1,5 @@
 class GitLatexdiff < Formula
+  desc "Wrapper around git and latexdiff"
   homepage "https://gitlab.com/git-latexdiff/git-latexdiff"
   url "https://gitlab.com/git-latexdiff/git-latexdiff.git",
     :tag => "v1.1.2",
