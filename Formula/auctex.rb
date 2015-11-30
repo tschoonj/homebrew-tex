@@ -1,9 +1,9 @@
 class Auctex < Formula
   desc "Emacs package for writing and formatting TeX"
   homepage "https://www.gnu.org/software/auctex/"
-  url "http://ftpmirror.gnu.org/auctex/auctex-11.88.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/auctex/auctex-11.88.tar.gz"
-  sha256 "716867d5fbcc5c67cca781d7c1984e6a3a6d5da056ec3b4f35170805bf4dc83f"
+  url "http://ftpmirror.gnu.org/auctex/auctex-11.89.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/auctex/auctex-11.89.tar.gz"
+  sha256 "98af296907b371083289a8b35bd6ff24cfd8fafb013033b724aacb5fe774c9b1"
 
   head do
     url "http://git.savannah.gnu.org/cgit/auctex.git"
@@ -18,12 +18,10 @@ class Auctex < Formula
     (share/"texmf").mkpath
 
     system "./autogen.sh" if build.head?
-
     system "./configure", "--prefix=#{prefix}",
                           "--with-texmf-dir=#{share}/texmf",
                           "--with-emacs=#{which "emacs"}",
-                          "--with-lispdir=#{share}/emacs/site-lisp"
-
+                          "--with-lispdir=#{elisp}"
     system "make"
     ENV.deparallelize # Needs a serialized install
     system "make", "install"
@@ -36,15 +34,12 @@ class Auctex < Formula
 
     You can add it to your TEXMFHOME using:
       sudo tlmgr conf texmf TEXMFHOME "~/Library/texmf:#{HOMEBREW_PREFIX}/share/texmf"
-
-    Emacs Lisp files have been installed into:
-      #{HOMEBREW_PREFIX}/share/emacs/site-lisp
     EOS
   end
 
   test do
     (testpath/".emacs").write <<-EOS.undent
-      (add-to-list 'load-path "#{HOMEBREW_PREFIX}/share/emacs/site-lisp")
+      (add-to-list 'load-path "#{elisp}")
       (require 'tex-site)
     EOS
     (testpath/"test.tex").write <<-'EOS'.undent
