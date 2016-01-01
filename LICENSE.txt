@@ -1,4 +1,4 @@
-Copyright (c) 2015 Homebrew contributors.
+Copyright (c) 2015-2016 Homebrew contributors.
 
 All rights reserved.
 
