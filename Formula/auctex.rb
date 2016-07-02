@@ -1,7 +1,7 @@
 class Auctex < Formula
   desc "Emacs package for writing and formatting TeX"
   homepage "https://www.gnu.org/software/auctex/"
-  url "http://ftpmirror.gnu.org/auctex/auctex-11.89.tar.gz"
+  url "https://ftpmirror.gnu.org/auctex/auctex-11.89.tar.gz"
   mirror "https://ftp.gnu.org/gnu/auctex/auctex-11.89.tar.gz"
   sha256 "98af296907b371083289a8b35bd6ff24cfd8fafb013033b724aacb5fe774c9b1"
 
