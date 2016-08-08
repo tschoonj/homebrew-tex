@@ -68,7 +68,7 @@ class Lilypond < Formula
 
       # A really messed up workaround required on OS X --mkhl
       lib.cd { Dir["*.dylib"].each { |p| ln_sf p, File.basename(p, ".dylib")+".so" } }
-      ENV.prepend_path "PATH", "#{bin}"
+      ENV.prepend_path "PATH", bin.to_s
     end
 
     args = %W[
