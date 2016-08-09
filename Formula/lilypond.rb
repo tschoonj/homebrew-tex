@@ -15,12 +15,6 @@ class Lilypond < Formula
     depends_on "autoconf" => :build
   end
 
-  # LilyPond currently only builds with an older version of Guile (<1.9)
-  resource "guile18" do
-    url "https://ftpmirror.gnu.org/guile/guile-1.8.8.tar.gz"
-    sha256 "c3471fed2e72e5b04ad133bbaaf16369e8360283679bcf19800bc1b381024050"
-  end
-
   option "with-doc", "Build documentation in addition to binaries (may require several hours)."
 
   depends_on :tex
@@ -54,6 +48,12 @@ class Lilypond < Formula
     depends_on "dblatex" => [:python, "dbtexmf.dblatex"]
     depends_on :python if MacOS.version <= :snow_leopard
     depends_on "texi2html"
+  end
+
+  # LilyPond currently only builds with an older version of Guile (<1.9)
+  resource "guile18" do
+    url "https://ftpmirror.gnu.org/guile/guile-1.8.8.tar.gz"
+    sha256 "c3471fed2e72e5b04ad133bbaaf16369e8360283679bcf19800bc1b381024050"
   end
 
   def install
