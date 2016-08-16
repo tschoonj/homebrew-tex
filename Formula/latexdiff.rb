@@ -1,19 +1,17 @@
 class Latexdiff < Formula
   desc "Mark up significant differences between LATEX files"
   homepage "http://www.ctan.org/pkg/latexdiff"
-  url "https://github.com/ftilmann/latexdiff/archive/1.1.0.tar.gz"
-  sha256 "e5fc439ac82fcce902134d207f751577abe4939a7ad7ed2df8f9989041701167"
+  url "https://github.com/ftilmann/latexdiff/releases/download/1.2.0/latexdiff-1.2.0.tar.gz"
+  sha256 "b139b7a289236b4daf1e94258253869be87b6c13a0dfecddf5259140f16c96cd"
 
   depends_on :tex
 
   def install
-    bin.install "dist/latexdiff"
-    bin.install "dist/latexdiff-vc"
-    bin.install "dist/latexrevise"
-
-    man1.install "dist/latexdiff.1"
-    man1.install "dist/latexdiff-vc.1"
-    man1.install "dist/latexrevise.1"
+    bin.install %w[latexdiff latexdiff-fast latexdiff-so latexdiff-vc
+                   latexrevise]
+    man1.install %w[latexdiff-vc.1 latexdiff.1 latexrevise.1]
+    doc.install Dir["doc/*"]
+    pkgshare.install %w[contrib example]
   end
 
   test do
@@ -38,6 +36,6 @@ class Latexdiff < Formula
                \\DIFadd      \{ Goodnight,[ ]moon \}
                \\DIFaddend   \s+
                \.$/x
-    assert_match(expect, shell_output("latexdiff #{testpath}/test[12].tex"))
+    assert_match expect, shell_output("#{bin}/latexdiff test[12].tex")
   end
 end
