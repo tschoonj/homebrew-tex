@@ -1,15 +1,15 @@
 class Latexila < Formula
   desc "LaTeX editor for the GNOME desktop"
   homepage "https://wiki.gnome.org/Apps/LaTeXila"
-  url "https://download.gnome.org/sources/latexila/3.16/latexila-3.16.2.tar.xz"
-  sha256 "5ad20a2acdb8c93dea5aa175a219e62efe5f4a7ffb67bc52ff6faf0c6f42bad3"
+  url "https://download.gnome.org/sources/latexila/3.22/latexila-3.22.0.tar.xz"
+  sha256 "f78b643d95bbc3867430b32684c859a13aa887c1433d0e8df91a51168b564e54"
 
   depends_on "pkg-config" => :build
   depends_on "intltool" => :build
   depends_on "itstool" => :build
   depends_on "vala" => :build
   depends_on "gtksourceview3"
-  depends_on "gtkspell3"
+  depends_on "gspell"
   depends_on "libgee"
   depends_on "gobject-introspection"
   depends_on "gnome-icon-theme"
