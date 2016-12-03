@@ -10,7 +10,7 @@ before_install:
       travis_retry git fetch --unshallow;
     fi
   - HOMEBREW_REPOSITORY="$(brew --repo)"
-  - sudo chown -R $USER "$HOMEBREW_REPOSITORY"
+  - sudo chown -R "$USER" "$HOMEBREW_REPOSITORY"
   - git -C "$HOMEBREW_REPOSITORY" reset --hard origin/master
   - brew update || brew update
   - HOMEBREW_TAP_DIR="$(brew --repo "$TRAVIS_REPO_SLUG")"
