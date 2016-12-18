@@ -1,8 +1,8 @@
 class Latexila < Formula
   desc "LaTeX editor for the GNOME desktop"
   homepage "https://wiki.gnome.org/Apps/LaTeXila"
-  url "https://download.gnome.org/sources/latexila/3.22/latexila-3.22.0.tar.xz"
-  sha256 "f78b643d95bbc3867430b32684c859a13aa887c1433d0e8df91a51168b564e54"
+  url "https://download.gnome.org/sources/latexila/3.22/latexila-3.22.1.tar.xz"
+  sha256 "41692d850a48521d2a700ae296680464078ef0bef1c1383383b433c5ecdf2719"
 
   depends_on "pkg-config" => :build
   depends_on "intltool" => :build
